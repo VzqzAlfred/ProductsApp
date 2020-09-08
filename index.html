@@ -7,11 +7,50 @@
 
     <!--Estilo de Bootstrap-->
     <link rel="stylesheet" href="bootstrap.css">
-    
+
     <title>Aplicacción de lista de productos.</title>
 </head>
 <body>
+
+    <!--NAVIGATION-->
+    <nav class="navbar navbar-light bg-light">
+        <a href="#" class="navbar-brand"> Products App</a>
+    </nav>
     
+    <div class="container">
+        <!--APLICATION-->
+        <div id="App" class="row pt-5">
+            
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Agrega un producto</h4>
+                    </div>
+                    <form id="product-form" class="card-body">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Product Name" 
+                                class="form-control">
+                        </div>
+
+                        <div class="form-group">        <!--STEP hace a que pueda agregar numeros con punto-->
+                            <input type="number" step="0.01" id="price" placeholder="Product price" 
+                                class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="number" id="year" min="1900" value="2020" class="form-control" 
+                                placeholder="Year product">
+                        </div>
+                        <input type="submit" value="Save" class="btn btn-primary btn-block">
+                    </form>
+                </div>
+            </div>
+
+            <div id="product-list" class="col-md-8">
+                
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
